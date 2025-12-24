@@ -86,7 +86,7 @@
                     <div class="flex gap-4">
                         <a href="#trade-register" class="hover:text-luxury-500 transition">Register Business</a>
                         <span class="text-luxury-500">|</span>
-                        <a href="#" onclick="showAdminPanel(event)" class="hover:text-luxury-500 transition font-bold text-luxury-300">Admin Panel</a>
+                        <a href="#" onclick="showLoginModal(event)" class="hover:text-luxury-500 transition font-bold text-luxury-300">Admin Panel</a>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                         <a href="#gallery-section" onclick="toggleMobileMenu()">Showroom Gallery</a>
                         <a href="#bulk" class="text-sale" onclick="toggleMobileMenu()">Clearance Stock</a>
                         <a href="#trade-register" onclick="toggleMobileMenu()">Become a Dealer</a>
-                        <a href="#" onclick="toggleMobileMenu(); showAdminPanel(event)" class="mt-4 text-sm font-bold text-luxury-900 border-t pt-4">Access Admin Panel</a>
+                        <a href="#" onclick="toggleMobileMenu(); showLoginModal(event)" class="mt-4 text-sm font-bold text-luxury-900 border-t pt-4">Access Admin Panel</a>
                     </div>
                 </div>
             </header>
@@ -319,7 +319,7 @@
                             <li>123 Distribution Hub</li>
                             <li>Logistics Park</li>
                             <li>City Center, 45000</li>
-                            <li class="mt-4"><a href="tel:9870489651" class="text-white">9870489651</a></li>
+                            <li class="mt-4"><a href="tel:+917740093109" class="text-white">+91 77400 93109</a></li>
                         </ul>
                     </div>
                     <div>
@@ -334,10 +334,10 @@
             </footer>
 
             <!-- FLOATING ACTIONS -->
-            <a href="https://wa.me/9870489651" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition z-40 float-btn">
+            <a href="https://wa.me/917740093109" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition z-40 float-btn">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="tel:9870489651" class="fixed bottom-24 right-6 w-14 h-14 bg-luxury-900 text-white rounded-full flex items-center justify-center text-xl shadow-xl hover:scale-110 transition z-40 float-btn">
+            <a href="tel:+917740093109" class="fixed bottom-24 right-6 w-14 h-14 bg-luxury-900 text-white rounded-full flex items-center justify-center text-xl shadow-xl hover:scale-110 transition z-40 float-btn">
                 <i class="fas fa-phone-alt"></i>
             </a>
         </div>
@@ -455,7 +455,20 @@
             </div>
         </div>
 
-        <!-- MODALS (Add Product / Upload) -->
+        <!-- MODALS (Login / Add Product / Upload) -->
+
+        <!-- Login Modal -->
+        <div id="login-modal" class="fixed inset-0 z-[80] hidden flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div class="bg-white p-8 rounded shadow-2xl w-full max-w-sm">
+                <h3 class="text-2xl font-serif font-bold mb-6 text-center">Admin Access</h3>
+                <form onsubmit="handleLogin(event)">
+                    <input type="text" id="admin-user" placeholder="Username" class="w-full border p-3 rounded mb-4 focus:border-luxury-500 outline-none">
+                    <input type="password" id="admin-pass" placeholder="Password" class="w-full border p-3 rounded mb-6 focus:border-luxury-500 outline-none">
+                    <button type="submit" class="w-full bg-luxury-900 text-white py-3 font-bold rounded hover:bg-luxury-500 transition">Login</button>
+                    <button type="button" onclick="closeModal('login-modal')" class="w-full mt-2 text-sm text-gray-500 hover:text-gray-800">Cancel</button>
+                </form>
+            </div>
+        </div>
         
         <!-- Product Modal -->
         <div id="product-modal" class="fixed inset-0 z-[80] hidden flex items-center justify-center bg-black/50 backdrop-blur-sm">
@@ -619,7 +632,7 @@
             const product = db.products.find(p => p.id === id);
             if(!product) return;
             const msg = `Hi, I am interested in buying: ${product.brand} - ${product.name} (Ref: ${product.id}). Is this in stock?`;
-            const url = `https://wa.me/9870489651?text=${encodeURIComponent(msg)}`;
+            const url = `https://wa.me/917740093109?text=${encodeURIComponent(msg)}`;
             window.open(url, '_blank');
         }
 
@@ -711,19 +724,32 @@
 
         // --- ADMIN BACKEND LOGIC ---
 
-        function showAdminPanel(e) {
+        window.showLoginModal = (e) => {
             if(e) e.preventDefault();
-            document.getElementById('public-view').classList.add('hidden');
-            document.getElementById('admin-panel').classList.remove('hidden');
-            initAdmin();
-            window.scrollTo(0,0);
-        }
+            document.getElementById('login-modal').classList.remove('hidden');
+        };
 
-        function logoutAdmin() {
+        window.handleLogin = (e) => {
+            e.preventDefault();
+            const u = document.getElementById('admin-user').value;
+            const p = document.getElementById('admin-pass').value;
+            if(u === 'admin' && p === 'admin123') {
+                closeModal('login-modal');
+                document.getElementById('public-view').classList.add('hidden');
+                document.getElementById('admin-panel').classList.remove('hidden');
+                initAdmin();
+                window.scrollTo(0,0);
+                showToast('Welcome Admin', 'success');
+            } else {
+                showToast('Invalid Credentials', 'error');
+            }
+        };
+
+        window.logoutAdmin = () => {
             document.getElementById('admin-panel').classList.add('hidden');
             document.getElementById('public-view').classList.remove('hidden');
             window.scrollTo(0,0);
-        }
+        };
 
         function initAdmin() {
             renderAdminProductTable();
