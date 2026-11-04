@@ -1,536 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Diwali Magic AI Creative Kit | ₹99</title>
-
-<meta name="description" content="Create stunning Diwali photos, greetings and festive designs with AI. Get your Diwali Magic AI Creative Kit for ₹99.">
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --maroon: #7b1020;
-    --gold: #dca52c;
-    --cream: #fffaf1;
-    --dark: #251c1c;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: var(--dark);
-    background: white;
-}
-
-.container {
-    width: 90%;
-    max-width: 1150px;
-    margin: auto;
-}
-
-header {
-    padding: 18px 0;
-    background: var(--cream);
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--maroon);
-}
-
-.hero {
-    padding: 60px 0;
-    background: linear-gradient(135deg, #fffaf1, white);
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.badge {
-    background: #f8ead1;
-    color: var(--maroon);
-    padding: 10px 15px;
-    border-radius: 30px;
-    display: inline-block;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 52px;
-    line-height: 1.1;
-    color: var(--maroon);
-    margin: 20px 0;
-}
-
-.subtitle {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #6c6260;
-}
-
-.price {
-    margin: 25px 0;
-    font-size: 38px;
-    font-weight: bold;
-    color: var(--maroon);
-}
-
-.cta {
-    display: inline-block;
-    background: var(--maroon);
-    color: white;
-    padding: 17px 28px;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.cta:hover {
-    background: #570b17;
-    transform: translateY(-2px);
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 18px;
-}
-
-section {
-    padding: 65px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-title h2 {
-    font-size: 36px;
-    color: var(--maroon);
-    margin-bottom: 15px;
-}
-
-.section-title p {
-    color: #6c6260;
-    line-height: 1.6;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.card {
-    padding: 25px;
-    border: 1px solid #f0e4d1;
-    border-radius: 15px;
-    background: white;
-}
-
-.card h3 {
-    margin: 15px 0;
-}
-
-.card p {
-    color: #6c6260;
-    line-height: 1.6;
-}
-
-.icon {
-    font-size: 32px;
-}
-
-.features {
-    background: var(--cream);
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.feature-list {
-    list-style: none;
-}
-
-.feature-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 17px;
-}
-
-.feature-list li::before {
-    content: "✓ ";
-    color: var(--gold);
-    font-weight: bold;
-}
-
-.offer {
-    background: linear-gradient(135deg, #7b1020, #450812);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-    border-radius: 20px;
-}
-
-.offer h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.offer p {
-    margin: 15px 0;
-    line-height: 1.7;
-}
-
-.offer .price {
-    color: #ffdf83;
-}
-
-.offer .cta {
-    background: #f6c64d;
-    color: #50101a;
-}
-
-.faq {
-    max-width: 800px;
-    margin: auto;
-}
-
-details {
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
-
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 17px;
-}
-
-details p {
-    padding-top: 15px;
-    line-height: 1.6;
-    color: #6c6260;
-}
-
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-.sticky-buy {
-    display: none;
-}
-
-@media (max-width: 768px) {
-
-    .hero-grid,
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-image {
-        order: -1;
-    }
-
-    h1 {
-        font-size: 38px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
-
-    .sticky-buy {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 12px 15px;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 -3px 15px rgba(0,0,0,0.1);
-        z-index: 100;
-    }
-
-    .sticky-buy strong {
-        color: var(--maroon);
-        font-size: 22px;
-    }
-
-    .sticky-buy .cta {
-        padding: 12px 18px;
-        font-size: 14px;
-    }
-
-    body {
-        padding-bottom: 70px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <div class="container">
-        <div class="logo">🪔 Diwali Magic AI</div>
-    </div>
-</header>
-
-<!-- HERO SECTION -->
-
-<section class="hero">
-<div class="container hero-grid">
-
-<div>
-    <span class="badge">✨ FESTIVE AI CREATIVE EBOOK</span>
-
-    <h1>Create Stunning Diwali Photos with AI</h1>
-
-    <p class="subtitle">
-        Ready-to-use AI prompts to create beautiful Diwali photos,
-        festive greetings and creative designs without struggling
-        to write prompts from scratch.
-    </p>
-
-    <div class="price">₹99</div>
-
-    <a href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos"
-       class="cta buy-btn">
-       Get Your eBook Now – ₹99 →
-    </a>
-
-    <p style="margin-top:15px;color:#777;font-size:13px;">
-        Digital eBook · One-time payment
-    </p>
-</div>
-
-<div class="hero-image">
-    <img src="Diwali.png"
-         alt="Diwali Magic AI Creative Kit">
-</div>
-
-</div>
-</section>
-
-<!-- PROBLEM SECTION -->
-
-<section>
-<div class="container">
-
-<div class="section-title">
-    <h2>Creating Festive Designs Is Easier with AI</h2>
-    <p>Stop struggling with prompt ideas. Start creating.</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-    <div class="icon">✍️</div>
-    <h3>Don't Know What to Write?</h3>
-    <p>Use ready-to-use AI prompts instead of starting from scratch.</p>
-</div>
-
-<div class="card">
-    <div class="icon">🪔</div>
-    <h3>Want Beautiful Diwali Photos?</h3>
-    <p>Explore festive outfits, backgrounds and creative concepts.</p>
-</div>
-
-<div class="card">
-    <div class="icon">⚡</div>
-    <h3>Save Your Time</h3>
-    <p>Copy, customize and use prompts with a compatible AI image tool.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- PRODUCT FEATURES -->
-
-<section class="features">
-<div class="container feature-grid">
-
-<div>
-    <div class="section-title" style="text-align:left;">
-        <h2>What's Inside the Creative Kit?</h2>
-        <p>Everything you need to get started with festive AI creativity.</p>
-    </div>
-
-    <ul class="feature-list">
-        <li>AI Diwali Photo Prompts</li>
-        <li>Step-by-Step Prompt Guide</li>
-        <li>Festive Background & Outfit Ideas</li>
-        <li>Diwali Greeting Creative Ideas</li>
-        <li>Bonus Greeting Pack</li>
-    </ul>
-
-    <br>
-
-    <a href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos"
-       class="cta buy-btn">
-       Get Instant Access – ₹99 →
-    </a>
-</div>
-
-<div class="hero-image">
-    <img src="Diwali.png"
-         alt="Diwali AI Creative Kit Preview">
-</div>
-
-</div>
-</section>
-
-<!-- OFFER SECTION -->
-
-<section>
-<div class="container">
-
-<div class="offer">
-
-<h2>Diwali Magic AI Creative Kit</h2>
-
-<p>
-Create stunning festive photos, greetings and designs
-with ready-to-use AI prompts.
-</p>
-
-<div class="price">₹99</div>
-
-<p>One-time payment · Digital eBook</p>
-
-<a href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos"
-   class="cta buy-btn">
-   Buy Now for ₹99 →
-</a>
-
-</div>
-</div>
-</section>
-
-<!-- FAQ -->
-
-<section>
-<div class="container">
-
-<div class="section-title">
-    <h2>Frequently Asked Questions</h2>
-</div>
-
-<div class="faq">
-
-<details>
-<summary>What is Diwali Magic AI Creative Kit?</summary>
-<p>
-It is a digital eBook containing AI prompts and guidance
-for creating Diwali-themed photos and designs.
-</p>
-</details>
-
-<details>
-<summary>Is this a physical product?</summary>
-<p>
-No. This is a digital eBook. No physical product will be shipped.
-</p>
-</details>
-
-<details>
-<summary>Can beginners use these prompts?</summary>
-<p>
-Yes. The prompts are designed to be easy to copy and use.
-</p>
-</details>
-
-<details>
-<summary>How will I receive my eBook?</summary>
-<p>
-After completing your purchase, follow the delivery instructions
-provided on the checkout page.
-</p>
-</details>
-
-</div>
-</div>
-</section>
-
-<!-- FINAL CTA -->
-
-<section>
-<div class="container">
-
-<div class="section-title">
-
-<h2>Make This Diwali More Creative with AI!</h2>
-
-<p>
-Get your Diwali Magic AI Creative Kit today for just ₹99.
-</p>
-
-<br>
-
-<a href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos"
-   class="cta buy-btn">
-   Get Your eBook Now – ₹99 →
-</a>
-
-</div>
-</div>
-</section>
-
-<footer>
-<p>© <span id="year"></span> Diwali Magic AI Creative Kit</p>
-<p style="margin-top:8px;">Digital Product · ₹99</p>
-</footer>
-
-<!-- MOBILE STICKY PURCHASE BUTTON -->
-
-<div class="sticky-buy">
-    <div>
-        <small>Diwali Magic AI Kit</small><br>
-        <strong>₹99</strong>
-    </div>
-
-    <a href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos"
-       class="cta buy-btn">
-       Buy Now →
-    </a>
-</div>
-
+<!-- Meta Pixel Code -->
 <script>
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-// Add tracking or analytics code here if required.
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1060962076775856');
+fbq('track', 'PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1060962076775856&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
-</body>
-</html>
+
+    
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100+ AI Prompts for Diwali Images | ₹99</title>
+<meta name="description" content="Create festive Diwali AI photos with 100+ ready-to-use prompts, face-reference guidance, outfits, backgrounds and a step-by-step video tutorial. Digital eBook ₹99.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box} :root{--maroon:#7b1020;--gold:#dca52c;--cream:#fffaf1;--ink:#251c1c;--muted:#6c6260}body{font-family:Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}.container{width:min(1120px,92%);margin:auto}header{padding:17px 0;background:var(--cream);border-bottom:1px solid #f0e4d1}.logo{font-weight:800;color:var(--maroon);font-size:21px}.hero{padding:55px 0;background:linear-gradient(130deg,#fffaf1,#fff)}.hero-grid,.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.badge{display:inline-block;background:#f8ead1;color:var(--maroon);padding:8px 14px;border-radius:30px;font-size:13px;font-weight:bold}h1{font-size:clamp(35px,5vw,54px);line-height:1.1;color:var(--maroon);margin:18px 0}.subtitle{font-size:18px;color:var(--muted);line-height:1.7}.price{font-size:38px;font-weight:900;color:var(--maroon);margin:22px 0}.cta{display:inline-block;background:var(--maroon);color:#fff;text-decoration:none;padding:15px 24px;border-radius:10px;font-weight:800;transition:.2s}.cta:hover{background:#570b17;transform:translateY(-2px)}.hero-image img{display:block;width:100%;max-width:520px;margin:auto;border-radius:16px}.micro{font-size:13px;color:#777;margin-top:12px}section{padding:62px 0}.soft{background:var(--cream)}.section-title{text-align:center;max-width:760px;margin:0 auto 32px}.section-title h2{font-size:clamp(27px,3.5vw,38px);color:var(--maroon);line-height:1.2;margin-bottom:12px}.section-title p{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #f0e4d1;border-radius:15px;padding:23px}.icon{font-size:30px}.card h3{margin:10px 0}.card p{color:var(--muted)}.feature-list{list-style:none;margin:20px 0}.feature-list li{padding:12px 0;border-bottom:1px solid #eadfce}.feature-list li:before{content:'✓ ';color:var(--gold);font-weight:bold}.callout{background:#fff;border:1px solid #f0e4d1;border-radius:16px;padding:22px;margin-top:22px}.callout strong{color:var(--maroon)}.video-wrap{max-width:850px;margin:auto;border-radius:16px;overflow:hidden;background:#1a1a1a;box-shadow:0 14px 40px #4a091322}.video-frame{position:relative;height:0;padding-bottom:56.25%}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.offer{background:linear-gradient(135deg,#7b1020,#450812);color:#fff;text-align:center;padding:42px 20px;border-radius:20px}.offer h2{font-size:clamp(27px,3.5vw,38px)}.offer p{margin:12px 0;color:#f7e9e6}.offer .price{color:#ffdf83}.offer .cta{background:#f6c64d;color:#50101a}.faq{max-width:800px;margin:auto}details{padding:18px 0;border-bottom:1px solid #eadfce}summary{cursor:pointer;font-weight:bold}details p{padding-top:10px;color:var(--muted)}footer{text-align:center;background:var(--ink);color:white;padding:25px;font-size:13px}.sticky-buy{display:none}
+@media(max-width:760px){.hero{padding:35px 0}.hero-grid,.feature-grid{grid-template-columns:1fr;gap:25px}.hero-image{order:-1}h1{font-size:38px}.cards{grid-template-columns:1fr}section{padding:46px 0}.sticky-buy{display:flex;position:fixed;bottom:0;left:0;right:0;background:white;padding:10px 4%;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 18px #0001;z-index:99}.sticky-buy strong{color:var(--maroon);font-size:21px}.sticky-buy .cta{padding:11px 16px;font-size:14px}body{padding-bottom:68px}}
+</style>
+</head><body>
+<header><div class="container"><div class="logo">🪔 Diwali Magic AI</div></div></header>
+<main>
+<section class="hero"><div class="container hero-grid"><div>
+<span class="badge">✨ DIGITAL EBOOK · 100+ AI PROMPTS</span>
+<h1>Create Diwali Photos That Look Like <em>You</em>—With AI</h1>
+<p class="subtitle">Want beautiful festive portraits but frustrated when AI changes your face? Explore 100+ detailed Diwali image prompts with face-reference guidance to help you create festive photos that better preserve your own look—along with outfits, backgrounds and creative styles.</p>
+<div class="price">₹99 <span style="font-size:14px;font-weight:normal;color:#6c6260">· one-time payment</span></div>
+<a class="cta buy-btn" href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos">Get 100+ AI Prompts – ₹99 →</a>
+<p class="micro">Digital eBook · No physical book shipped · AI results can vary by tool and reference image.</p>
+</div><div class="hero-image"><img src="Diwali.png" alt="100 plus AI Prompts for Diwali Images eBook cover"></div></div></section>
+<section><div class="container"><div class="section-title"><h2>Does AI Keep Changing Your Face?</h2><p>You ask AI for a festive portrait—but the result sometimes looks like someone else. Your outfit may look great, yet your face doesn't feel familiar.</p></div><div class="cards">
+<div class="card"><div class="icon">👤</div><h3>“This doesn't look like me!”</h3><p>AI portraits can change facial features when prompts or reference inputs are unclear.</p></div>
+<div class="card"><div class="icon">✍️</div><h3>Confused about the prompt?</h3><p>It can be difficult to describe the exact outfit, pose, lighting and festive setting.</p></div>
+<div class="card"><div class="icon">🪔</div><h3>Want a festive photo?</h3><p>Get ideas for Diwali looks, diya scenes, elegant portraits and celebration backgrounds.</p></div>
+</div><div class="callout"><strong>Face-reference prompt guidance included:</strong> Learn to include your own photo as a reference and ask the AI to retain recognizable facial characteristics. It can help improve likeness, but exact face matching is not guaranteed and depends on the AI tool.</div></div></section>
+<section class="soft"><div class="container feature-grid"><div><div class="section-title" style="text-align:left;margin:0"><h2>Inside Your Diwali AI Prompt eBook</h2><p>Ready-to-use ideas to help you move from prompt confusion to creative inspiration.</p></div><ul class="feature-list"><li>100+ Diwali image AI prompts</li><li>Face-reference and likeness guidance</li><li>Traditional and festive outfit ideas</li><li>Diwali backgrounds, poses and lighting concepts</li><li>Step-by-step prompt guide</li><li>Greeting and creative design ideas</li></ul><a class="cta buy-btn" href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos">Get the eBook for ₹99 →</a></div><div class="hero-image"><img src="Diwali.png" alt="Diwali AI prompt eBook preview"></div></div></section>
+<section><div class="container"><div class="section-title"><h2>🎥 Watch the Instruction Video</h2><p>See how to use the prompts and follow the process step by step. Watch the tutorial before creating your first image.</p></div><div class="video-wrap"><div class="video-frame"><iframe src="https://www.youtube.com/embed/EgBfSDSlns8" title="Diwali Magic AI prompt instruction video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div><p style="text-align:center;color:var(--muted);margin-top:14px">Tip: Use a clear, well-lit reference photo in your AI image tool for better likeness potential.</p></div></section>
+<section><div class="container"><div class="offer"><h2>Ready to Create Your Diwali AI Photos?</h2><p>Get 100+ AI prompts, face-reference guidance and the instruction video in your Diwali creative kit.</p><div class="price">₹99</div><p>One-time payment · Digital eBook</p><a class="cta buy-btn" href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos">Get Instant Access – ₹99 →</a></div></div></section>
+<section class="soft"><div class="container"><div class="section-title"><h2>Frequently Asked Questions</h2></div><div class="faq">
+<details><summary>Will the AI image look exactly like my face?</summary><p>The prompts include face-reference guidance to help preserve recognizable features. Exact matching is not guaranteed; results depend on the AI platform, reference photo and settings.</p></details>
+<details><summary>What is included in this eBook?</summary><p>100+ Diwali image prompts and creative guidance for festive looks, backgrounds and image generation. Review the eBook contents for the full details.</p></details>
+<details><summary>Is this a physical book?</summary><p>No. It is a digital eBook. No physical product will be shipped.</p></details>
+<details><summary>Do I need to know how to write AI prompts?</summary><p>No. The prompts are prepared for you to copy and adapt. You will need access to a compatible AI image-generation tool.</p></details>
+<details><summary>How do I receive the eBook?</summary><p>Complete the payment through the checkout page and follow the digital delivery instructions shown there.</p></details>
+</div></div></section>
+<section><div class="container"><div class="section-title"><h2>Your Diwali Look. Your Face. Your AI Creativity. 🪔</h2><p>Start exploring festive image ideas with 100+ AI prompts for just ₹99.</p><br><a class="cta buy-btn" href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos">Get Your Diwali Prompt eBook – ₹99 →</a></div></div></section>
+</main><footer>© <span id="year"></span> Diwali Magic AI Creative Kit · Digital eBook</footer>
+<div class="sticky-buy"><div><small>100+ Diwali AI Prompts</small><br><strong>₹99</strong></div><a class="cta buy-btn" href="https://superprofile.bio/vp/diwali-magic-ai-creative-kit-%E2%80%93-create-stunning-ai-diwali-photos">Buy Now →</a></div>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
